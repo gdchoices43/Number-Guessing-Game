@@ -17,24 +17,22 @@ import random
 # Our welcome message function and welcome banner
 def welcome_msg():
     print("""
-+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
 WELCOME TO THE NUMBER GUESSING GAME!!!
-=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
     """)
     return random.randint(1, 10)
 
 
-# Our attempts reset function to start each new game at 0
+# Our high score function to keep track of the high score
 def attempts_reset():
     return 0
 
 
-# Our start game function
 def start_game():
     """Psuedo-code Hints
 
     When the program starts, we want to:
-    Meets requirments with >>>
     ------------------------------------
     1. Display an intro/welcome message to the player.
     2. Store a random number as the answer/solution.
@@ -48,7 +46,7 @@ def start_game():
 
     ( You can add more features/enhancements if you'd like to. )
 
-    Exceeds requirements with >>>
+    Exceeds requirements:
     -------------------------------------
     1. As a player my guess should be within the number range. If my guess is outside the number
         range i should be told to try again.
@@ -101,12 +99,12 @@ def start_game():
                     if attempts < high_score:
                         # If it was then prompt the user they set a new high score
                         print("\nYou have just set a new High Score at: {}".format(attempts))
-                        # Setting the high_score variable to attempts taken
+                        # Setting the new high_score variable to attempts taken
                         high_score = attempts
                     # Checking if the amount of the attempts was higher than the high score
                     elif attempts > high_score:
                         # If it was then prompt the user of the current high score
-                        print("\nHigh Score is: {}  You got this keep trying!".format(high_score))
+                        print("\nHigh Score is: {}. You got this keep trying!".format(high_score))
                     # Prompting the user if they would like to play again
                     guess = input("\nWould you like to play again? ENTER [y]es/[n]o: ")
                     # Setting the guess variable to string format for the input
@@ -114,9 +112,10 @@ def start_game():
                     # Checking if the input from user is a [y] for yes
                     if guess == "y":
                         # If it is print a good luck message
-                        print("Awesome let's go, Good Luck!")
+                        print("Awesome, Good Luck!")
                         # Resetting the random number and returning the user to the welcome banner
                         sec_num = welcome_msg()
+                        # Informing the user of the current high score
                         print("The current High Score is {}".format(high_score))
                         # Resetting the attempts for the new game
                         attempts = attempts_reset()
@@ -124,13 +123,13 @@ def start_game():
                         continue
                     # Checking if the input from user is a [n] for no
                     elif guess == "n":
-                        # If it is print an Exiting Game message
+                        # If it is print a Exiting Game message
                         print("\nNo worries, come back anytime! Exiting Game")
                         # Stopping the loop and the program
                         break
                     else:
                         # If the user inputs anything other than "y" or "n" print this message
-                        print("\nNot a valid response. Exiting Game!")
+                        print("\nNot a valid response. Leaving Game!")
                         # Exiting the game due to invalid input from user
                         break
                 # Checking if the integer input from user is lower than the sec_num
