@@ -117,6 +117,7 @@ def start_game():
                         print("Awesome let's go, Good Luck!")
                         # Resetting the random number and returning the user to the welcome banner
                         sec_num = welcome_msg()
+                        print("The current High Score is {}".format(high_score))
                         # Resetting the attempts for the new game
                         attempts = attempts_reset()
                         # Continuing the game
