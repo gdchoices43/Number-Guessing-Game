@@ -2,7 +2,7 @@
 
  Unit 1:
 
- Number Guessing Game:
+# Number Guessing Game:
 
 This was a TreeHouse Tech Degree Project that is terminal/console based.
 
