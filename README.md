@@ -1,33 +1,21 @@
 # Techdegree Project 1
- My first TechDegree Project
 
  Unit 1:
+
  Number Guessing Game:
 
- """Psuedo-code Hints
+This was a TreeHouse Tech Degree Project that is terminal/console based.
 
- When the program starts, we want to:
- ------------------------------------
- 1. Display an intro/welcome message to the player.
- 2. Store a random number as the answer/solution.
- 3. Continuously prompt the player for a guess.
-   a. If the guess greater than the solution, display to the player "It's lower".
-   b. If the guess is less than the solution, display to the player "It's higher".
+The program has selected a random number for the user to try and guess.
+The user will be prompted with a welcome banner and asked to guess a number
+between the given range. They will also see what the current high score is. The
+high score is lowest amount of guesses. If the user guesses outside of the number
+range they will be told to try again inside the number range while still counting
+as a guess. If the user inputs an invalid guess like "two" instead of 2 the user
+will be prompted that was not an integer, try again, while still counting as a
+guess. The user will get Higher or Lower hits along the way until they guess the
+correct number. Once they guess the random number they will be shown the amount
+of guesses it took them, if they set a new high score it will be displayed to the
+user.
 
- 4. Once the guess is correct, stop looping, inform the user they "Got it"
-      and show how many attempts it took them to get the correct number.
- 5. Let the player know the game is ending, or something that indicates the game is over.
-
- ( You can add more features/enhancements if you'd like to. )
-
- Exceeds requirements:
- -------------------------------------
- 1. As a player my guess should be within the number range. If my guess is outside the number
-     range I should be told to try again.
- 2. As a player of the game after I guess correctly I should be prompted if I would like to
-     play again.
- 3. As a player of the game, at the start of the game I should be shown the high score(least amount
-     of points) so that I know what I am supposed to beat.
- 4. Every time a player decides to play again, the random number to the guess is updated so
-     players are guessing something new each time.
- """
+Good luck with this game! Hope you enjoy!
